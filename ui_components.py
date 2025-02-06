@@ -35,17 +35,35 @@ def hero_section(title, subtitle=None, description=None):
         unsafe_allow_html=True
     )
 
-def feature_card(icon, title, description):
+def feature_card(icon, title, description, link="#"):
     """Render a modern feature card with hover effects"""
     st.markdown(f"""
-        <div class="card feature-card">
+        <a href="{link}" target="_blank" style="text-decoration: none;">
+        <div class="card feature-card style="cursor: pointer;">
             <div class="feature-icon icon-pulse">
                 <i class="{icon}"></i>
             </div>
             <h3>{title}</h3>
             <p>{description}</p>
         </div>
+        </a>
     """, unsafe_allow_html=True)
+
+def feature_card_link(icon, title, description, link="#"):
+    """Render a modern feature card with hover effects and redirection"""
+    st.markdown(f"""
+        <a href="{link}" target="_blank" style="text-decoration: none;">
+            <div class="card feature-card" style="cursor: pointer;">
+                <div class="feature-icon icon-pulse">
+                    <i class="{icon}"></i>
+                </div>
+                <h3 >{title}</h3>
+                <p>{description}</p>
+            </div>
+        </a>
+    """, unsafe_allow_html=True)
+
+
 
 def about_section(content, image_path=None, social_links=None):
     """Render a modern about section with profile image and social links"""

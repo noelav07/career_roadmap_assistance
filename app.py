@@ -30,7 +30,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from ui_components import (
     apply_modern_styles, hero_section, feature_card, about_section, 
     page_header, render_analytics_section, render_activity_section, 
-    render_suggestions_section
+    render_suggestions_section,feature_card_link
 )
 from datetime import datetime
 from jobs.job_search import render_job_search
@@ -1187,7 +1187,19 @@ class ResumeApp:
         
         # Features Section
         st.markdown('<div class="feature-grid">', unsafe_allow_html=True)
-        
+    
+        feature_card_link(
+            "fas fa-road",
+            "RoadMap Generator ",
+            "Get personalised career roadmap with suggestions based on your previous skillsets.",
+            "http://localhost:8502" 
+        )
+        feature_card_link(
+            "fas fa-robot",
+            "Queries Assistant ",
+            "Get assistance for you career related queries",
+            "http://localhost:8503"  
+        )
         feature_card(
             "fas fa-robot",
             "AI-Powered Analysis",
