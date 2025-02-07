@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  career-roadmap:
+    container_name: cra
+    image: noelav07/career_roadmap_assistance
+    restart: always
+    ports:
+      - "8501:8501"
+      - "8502:8502"
+      - "8503:8503"
+    env_file:
+      - .env
