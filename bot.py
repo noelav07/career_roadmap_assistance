@@ -21,7 +21,9 @@ if 'gemini_history' not in st.session_state:
     st.session_state.gemini_history = []
 
 # Create a model instance
-st.session_state.model = genai.GenerativeModel('gemini-pro')
+# st.session_state.model = genai.GenerativeModel('gemini-pro')
+st.session_state.model = genai.GenerativeModel('gemini-2.0-flash')
+
 st.session_state.chat = st.session_state.model.start_chat(
     history=st.session_state.gemini_history,
 )

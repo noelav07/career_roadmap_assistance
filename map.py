@@ -10,9 +10,10 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 
 
-
 def get_career_roadmap(skills, role):
-    model = genai.GenerativeModel("gemini-pro")
+    # model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-2.0-flash")
+
     prompt = f"""
     Given the following skills: {skills}, and the desired role: {role},
     provide a detailed career roadmap including suggestions, required improvements, and learning resources.
