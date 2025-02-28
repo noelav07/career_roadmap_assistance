@@ -25,7 +25,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Fix: Install spaCy first, then download the model
 RUN pip install --no-cache-dir spacy
-RUN python -m spacy download en_core_web_sm --direct
+RUN python -m spacy download en_core_web_sm 
 
 # Copy all project files
 COPY . .
