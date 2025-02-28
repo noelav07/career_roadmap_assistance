@@ -3,7 +3,7 @@ version: "3.8"
 services:
   career-roadmap:
     container_name: cra
-    image: noelav07/career_roadmap_assistance:2.0
+    image: noelav07/career_roadmap_assistance:3.0
     restart: always
     ports:
       - "8501:8501"
